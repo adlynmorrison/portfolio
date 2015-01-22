@@ -1,0 +1,179 @@
+<!DOCTYPE>
+<html>
+
+<!-- Mirrored from anunaproduction.com/assignmentTwo.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jun 2014 21:37:36 GMT -->
+<head>
+  <meta charset="utf-8">
+
+  <title>JQuery Blossoming</title>
+  <link href="css/assignmentTwo.css" rel="stylesheet">
+  <!-- HTML5shiv, for IE 6, 7 and 8 -->
+  <!--[if lte IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+<body class="body">
+  <div class="container">
+    <header class="header">
+      <hgroup>
+        <h1>JQuery Blossoming</h1>
+
+        <h2>Text provided by Adlyn Morrison</h2><button id="b1">Next</button>
+      </hgroup>
+    </header>
+
+    <section class="main" role="main">
+      <article id="circle2">
+        <p>There have been many articles written in the case against fast food
+        but recently Michael Moss, a Pulitzer Prize–winning investigative
+        reporter for The Times, wrote an expose on Big Food companies. In
+        detail, Moss explores how the food companies “hyper-engineered,
+        savagely marketed, addiction-creating battle for 'stomach
+        share.'”</p><button id="b2">Next</button>
+      </article>
+
+      <article id="circle3">
+        <p>The article starts with a secret meeting depicted in Minneapolis, MN
+        Big Food companies in which they were told, under no uncertain terms
+        about obesity rates in correlation to their processed foods that they
+        needed to take responsibility for, and refused in any way to change
+        their ways. The article looks at several foods optimized for consumers
+        such as Dr. Pepper, Lunchables, and Cheetos, sugary, salty, fatty foods
+        that are not good in the quantities American consume
+        them.</p><button id="b3">Next</button>
+      </article>
+
+      <article id="circle4">
+        <p>Opponents of intense attacks on food companies that will is the
+        ultimate decision behind choosing foods that cause diabetes, obesity,
+        and hypertension. Moss says otherwise. Moss articles points out that
+        people overestimate sheer will power. It flatters egos to believe that
+        they cannot be manipulated, which is largely an illusion. The food
+        companies spend millions of dollars to find the perfect version of a
+        product in “labs and marketing meeting” to get people hooked on foods
+        that are “convenient and inexpensive.” Companies research color to the
+        perfect break point for a potato chip to consumers who, while not
+        powerless, are vulnerable to “industrial formulations and selling
+        campaigns.”</p><button id="b4">Next</button>
+      </article>
+
+      <article id="circle5">
+        <p>Opponents like A. Barton Hinkle, says the thought of companies
+        trying to please their consumers a sneaky, underhanded thing to do, and
+        therefore morally wrong hilarious. What researchers do is no different
+        from what many people who spend copious amounts of time on their
+        product that is what they are paid for. Companies should spend every
+        waking moment making products better, it is one of the byproducts of
+        free market capitalism.</p><button id="b5">Next</button>
+      </article>
+
+      <article id="circle6">
+        <p>Some criticizers of the food industry are looking towards the
+        government to make food companies take responsibility for their
+        formulations and their aggressive marketing campaigns. Opponents,
+        however, maintain that it was the government's fault to begin with
+        –starting with corn subsidies that have turned everything into a corn
+        product. The government is also responsible for favoring single-family
+        homes and zoning for big box stores resulting in the suburban sprawl
+        for white Americans and car culture. For blacks left behind in
+        America’s cities, governmental policies resulted in functioning and
+        healthy communities to falter and create the very food deserts Michelle
+        Obama and food activists are trying to reverse.</p><button id=
+        "b6">Next</button>
+      </article>
+
+      <article id="circle7">
+        <p>Redlining was common amongst banks and insurance companies so that
+        individuals and businesses could not receive the financing needed to
+        buy or maintain property. Freeways and eminent domain plowed through
+        areas deemed not worth preserving, ruining businesses and
+        neighborhoods. Policies ensured whole swaths of land where brown people
+        like me lived would not see investment dollars, would not see growth,
+        would not see health, and would not continue to flourish.~ The Boxcar
+        Grocer’s Alphonzo and Alison Cross (Why Mobile is Not
+        Enough)</p><button id="b7">Restart</button>
+      </article>
+    </section>
+
+    <figure id="hands">
+      <img class="cupped2" src="img/hands2.jpg" style="display:none;"> 
+      <img class="cupped3" src="img/hands3.jpg" style="display:none;"> 
+      <img class="half1"   src="img/hands4.jpg" style="display:none;"> 
+      <img class="half2"   src="img/hands5.jpg" style="display:none;"> 
+      <img class="half3"   src="img/hands7.jpg" style="display:none;"> 
+      <img class="opened1" src="img/hands8.html" style="display:none;">
+    </figure>
+  </div><!-- closes container -->
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript">
+     $(document).ready(function(){
+        
+        $('#circle2').hide();
+        $('#circle3').hide();
+        $('#circle4').hide();
+        $('#circle5').hide();
+        $('#circle6').hide();
+        $('#circle7').hide();
+
+        //Background images
+        $('.cupped2').hide();
+        $('.cupped3').hide();
+        $('.half1').hide();
+        $('.half2').hide();
+        $('.half3').hide();
+        $('.opened1').hide();
+        $('.opened2').hide();
+     });
+
+     $("#b1").click(function() {        
+        $(".header").fadeOut(500);
+        $("#circle2").fadeIn(500);
+    });
+
+    $("#b2").click(function() {
+        $("#circle2").fadeOut(500, function(){
+          $("#circle3").fadeIn(500);
+          $("body").css("background-image", "url(img/hands3.jpg)");
+        });  
+    });
+        
+     $("#b3").click(function() {        
+        $("#circle4").fadeIn(500, function(){
+          $("#circle3").fadeOut(500);
+          $("body").css("background-image", "url(img/hands4.jpg)");
+        });   
+    });
+
+    $("#b4").click(function() {     
+        $("#circle5").fadeIn(500, function(){
+          $("#circle4").fadeOut(500); 
+          $("body").css("background-image", "url(img/hands5.jpg)");
+        }); 
+    });
+
+    $("#b5").click(function() {     
+        $("#circle6").fadeIn(500, function(){
+          $("#circle5").fadeOut(500); 
+          $("body").css("background-image", "url(img/hands6.jpg)");  
+        }); 
+    });
+
+    $("#b6").click(function() {     
+        $("#circle7").fadeIn(500, function(){
+          $("#circle6").fadeOut(500);
+          $("body").css("background-image", "url(img/hands7.jpg)");  
+        });
+    });
+
+    $("#b7").click(function() {     
+        $(".header").fadeIn(500, function(){
+          $("#circle7").fadeOut(500);
+          $(".body").css("background-image", "url(img/hands1.jpg)");
+        });  
+    });
+    </script>
+</body>
+
+<!-- Mirrored from anunaproduction.com/assignmentTwo.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jun 2014 21:37:46 GMT -->
+</html>

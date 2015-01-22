@@ -1,0 +1,328 @@
+/* 
+	
+	Print and Copy on Ashland
+	
+	-----
+
+	Hand Crafted by Adlyn Morrison
+
+	☆  2 0 1 3  ·  [ http://anunaproductions.com ]
+	   ——————
+
+*/
+
+body{
+	font-family: sans-serif;
+	overflow:hidden;
+}
+
+h1{
+	display: block;
+	margin-bottom: -8%;
+	color: #CD5257;
+	text-align: center;
+	font-size: 2em;
+}
+
+#slideshow img{
+    height: auto;
+    width: auto\9; /* ie8 */
+
+}
+
+#slideshow{
+	position: relative;
+	width: 100%;
+	height:55%;
+	margin-bottom: 10%;
+	border:1px solid ##FFFFFF;
+	background: #FAFAFA;
+	-webkit-box-shadow: 0 0 5px #111;
+
+	-moz-box-shadow: 0 0 5px #111;
+	box-shadow: 0 0 5px #111;
+}
+
+#slideshow ul{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	overflow: hidden;
+	width: 96%;
+	height: 85%;
+	list-style: none outside none;
+	
+}
+.slides{
+	margin-left: 10%;
+}
+
+#slideshow li{
+	position:absolute;
+	z-index: 10;
+	display: none;
+	background:center;
+}
+
+#slideshow li:first-child{
+	z-index:1000;
+	display:block;
+}
+
+#slideshow .slideActive{
+	z-index: 1000;
+}
+
+#slideshow canvas{
+	position: absolute;
+	z-index: 100;
+	display: none;
+}
+
+#slideshow .arrow{
+	position: absolute;
+	top: 50%;
+	z-index: 5000;
+	margin-top: -43px;
+	width: 60px;
+	height: 86px;
+	background: url(../img/arrows.png) no-repeat;
+	cursor: pointer;
+}
+
+#slideshow .previous{ left:0; background-position: left top;}
+#slideshow .previous:hover{ background-position: left bottom;}
+
+#slideshow .next{right:0; background-position: right top;}
+#slideshow .next:hover{ background-position: right bottom;}
+
+/*	--------------------------------------------------
+	:: NAV
+	-------------------------------------------------- */
+
+nav{
+	margin-top: -40px;
+	margin-bottom: 5%;
+	font-size: 1.2em;
+}
+
+.nav-about{
+	margin-left: 20%;
+	display: inline;
+	list-style: none;
+}
+
+.nav-about a:hover{
+	background:url(../img/photos/about-x.png);
+}
+
+.nav-prints{
+	float: right;
+	margin-right: 22.5%;
+	display: inline;
+	list-style: none;
+}
+
+.nav-prints a:hover{
+	background:url(../img/photos/the-prints-x.png);
+}
+
+li{
+	display: inline;
+	list-style: none;
+}
+
+a{
+	display: inline;
+	color: #CCCCCC;
+	text-decoration: none;
+	padding: 0 5px;
+	color: #ccc;
+	font-weight: 700;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
+}
+	
+li a:hover, li a:focus {
+	color: #066;
+}
+
+@media screen and (max-width:767px) {
+	
+}
+
+/*	--------------------------------------------------
+	:: About
+	-------------------------------------------------- */
+.main-about-container{
+	background: #FAFAFA !important; 
+	min-height: 0;
+	font-family: "Courier", Courier;;
+	
+}
+.address{
+	border-top: 2px #DDD solid;
+	text-align: right;
+	color: #CF5C61;
+	text-transform:uppercase;
+	font-family:"Sackers Light Classic Roman";
+}
+
+.row{
+	height:100%;
+}
+
+.red{
+	font-size: 1.8em;
+	color: #CF5C61;
+	font-family:"Sackers Light Classic Roman";
+}
+.left{
+	width: 40%;
+	padding-left:4%;
+}
+
+.right{
+	width: 50%;
+	float:right;
+	margin-top: -23%;
+	position:static;
+	padding-right:4%;
+}
+
+p{
+	line-height: 1em;
+	font-size: 13px, 1.3em;
+}
+
+#map_canvas{
+	border: 5px #FFF solid;
+	height: 70%;
+	width: 100%;
+	background-color: #CCC;
+}
+
+/*	--------------------------------------------------
+	:: BOOK FLIP
+	-------------------------------------------------- */
+	
+@font-face {
+	font-family: 'arrows';
+	src:url('../fonts/arrows/arrows.eot');
+	src:url('../fonts/arrows/arrowsd41d.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/arrows/arrows.woff') format('woff'),
+		url('../fonts/arrows/arrows.ttf') format('truetype'),
+		url('../fonts/arrows/arrows.svg#arrows') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.bb-custom-wrapper nav a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 2px;
+	background: #72b890;
+	color: #fff;
+	font-size: 0;
+	margin: 2px;
+}
+
+.bb-custom-wrapper nav a:hover {
+	opacity: 0.6;
+}
+
+.bb-custom-icon:before {
+	font-family: 'arrows';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 20px;
+	line-height: 30px;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+
+.bb-custom-icon-first:before,
+.bb-custom-icon-last:before {
+	content: "\e002";
+}
+
+.bb-custom-icon-arrow-left:before,
+.bb-custom-icon-arrow-right:before {
+	content: "\e003";
+}
+
+.bb-custom-icon-arrow-left:before,
+.bb-custom-icon-first:before {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/* No JS */
+.no-js .bb-custom-wrapper {
+	height: auto;
+}
+
+.no-js .bb-custom-content {
+	height: 470px;
+}
+
+
+/*	--------------------------------------------------
+	:: FOOTER
+	-------------------------------------------------- */
+	
+.prints-footer{
+	margin-top: -7.6%;
+}
+	
+.logo-grey{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+
+#footer-text{
+	font-size: .9em;
+	margin-top: -80px;
+	margin-left: 170px;
+
+}
+
+.footer-about{
+	margin-left: 5px;
+}
+
+.footer-press{
+	margin-left: 5px;
+}
+
+#footer-contact{
+	margin-top: -80px;
+	margin-right: 25px;
+	color: #CD5257;
+	text-align: right;
+	font-size: 1.3em;
+}
+#footer-social{
+	margin-left: 175px;
+	margin-top: -10px;
+	
+}
+#footer-facebook{
+	margin-left: 10px; 
+}
+#footer-tumblr{
+	margin-left: 10px; 
+}
+
+.about-footer, .home-footer{
+	margin-top:-7%;
+}

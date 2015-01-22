@@ -1,0 +1,181 @@
+<html lang="en" class="no-js demo-1">
+
+<!-- Mirrored from anunaproduction.com/prints.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jun 2014 22:05:41 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+    <script src="js/modernizr.custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/pocoa-styles.css"/>
+
+</head>
+
+<body>
+<header>
+	<h1><a href="image10.html"><img src="img/logo.gif" alt="print-and-copy-logo"></a></h1>
+</header>
+	
+<nav>
+	<ul>
+		<li class="nav-about"><a href="about.html" alt="print-and-copy-about-page">about</a></li>
+		<li class="nav-prints"><a href="prints.html" alt="print-and-copy-the-prints-page">the prints</a></li>
+	</ul>
+</nav>
+
+<body class="print-body" style="overflow: scroll;">
+		<div class="container" >
+			<!-- Top Navigation -->				
+			<div class="main clearfix">
+				<div class="bb-custom-wrapper">
+					
+					<div id="bb-bookblock" class="bb-bookblock">
+						<div class="bb-item">
+							<img src="img/photos/business-card-prices.jpg" height="480" width="1200"  style="margin-left:30px" alt="image01" /></a>
+						</div>
+						<div class="bb-item">
+							<img src="img/photos/dj-business-card.jpg" height="450" width="1200"  style="margin-left:30px" alt="image01"/>
+						</div>
+						<div class="bb-item">
+							<img src="img/photos/coco-braids-and-weaves-flyer.jpg" height="450" width="1200" alt="image03"/>
+						</div>
+						<div class="bb-item">
+							<img src="img/photos/professional-AC.jpg" height="450" width="1200" alt="image04"/>
+						</div>
+						<div class="bb-item">
+							<img src="img/photos/trophies-and-plaques-flyer.jpg" height="450" width="1200" alt="image05"/>
+						</div>
+					</div>
+					<nav style="margin-top:20px; margin-left: 40%;">
+						<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first" >First page</a>
+						<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+						<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+						<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+					</nav>
+				</div>
+			</div>
+		</div><!-- /container -->
+
+<!-- Getting rid of the arrows for the nav -->
+	<span class=""></span>
+	<span class=""></span>
+<!-- /that way everything stays in place -->
+</div>
+
+<div class="prints-footer">
+
+<div class="logo-grey"><a href="index-2.html"><img src="img/photos/logo-grey.jpg" alt="logo" height="80" width="130"></a></div>
+
+	<ul id="footer-text">
+		<li class="footer-president"> <a href="#" alt="">THE PRES</a></li>
+		<li class="footer-about"> <a href="#" alt="">ABOUT</a></li>
+		<li class="footer-press"> <a href="#" alt="">PRESS</a></li>
+	</ul>
+
+	<ul id="footer-social">
+		<li id="footer-twitter"><a href="#"><img src="img/icons/twitter-icon.png" alt=""></a></li>
+		<li id="footer-facebook"><a href="#"><img src="img/icons/facebook-icon.png" alt=""></a></li>
+		<li id="footer-tumblr"><a href="#"><img src="img/icons/tumblr-icon.png" alt=""></a></li>
+	</ul>
+
+	<ul id="footer-contact">
+		<li class="footer-phone">ph: 773.488.2626</li>
+		<br>
+		<li class="footer-hours">mon-fri 11am-5pm</li>
+	</ul>
+
+</div>
+
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquerypp.custom.js"></script>
+<script src="js/jquery.bookblock.js"></script>
+<script>
+var Page = (function() {
+	
+	var config = {
+			$bookBlock : $( '#bb-bookblock' ),
+			$navNext : $( '#bb-nav-next' ),
+			$navPrev : $( '#bb-nav-prev' ),
+			$navFirst : $( '#bb-nav-first' ),
+			$navLast : $( '#bb-nav-last' )
+		},
+		init = function() {
+			config.$bookBlock.bookblock( {
+				speed : 800,
+				shadowSides : 0.8,
+				shadowFlip : 0.7
+			} );
+			initEvents();
+		},
+		initEvents = function() {
+			
+			var $slides = config.$bookBlock.children();
+
+			// add navigation events
+			config.$navNext.on( 'click touchstart', function() {
+				config.$bookBlock.bookblock( 'next' );
+				return false;
+			} );
+
+			config.$navPrev.on( 'click touchstart', function() {
+				config.$bookBlock.bookblock( 'prev' );
+				return false;
+			} );
+
+			config.$navFirst.on( 'click touchstart', function() {
+				config.$bookBlock.bookblock( 'first' );
+				return false;
+			} );
+
+			config.$navLast.on( 'click touchstart', function() {
+				config.$bookBlock.bookblock( 'last' );
+				return false;
+			} );
+			
+			// add swipe events
+			$slides.on( {
+				'swipeleft' : function( event ) {
+					config.$bookBlock.bookblock( 'next' );
+					return false;
+				},
+				'swiperight' : function( event ) {
+					config.$bookBlock.bookblock( 'prev' );
+					return false;
+				}
+			} );
+
+			// add keyboard events
+			$( document ).keydown( function(e) {
+				var keyCode = e.keyCode || e.which,
+					arrow = {
+						left : 37,
+						up : 38,
+						right : 39,
+						down : 40
+					};
+
+				switch (keyCode) {
+					case arrow.left:
+						config.$bookBlock.bookblock( 'prev' );
+						break;
+					case arrow.right:
+						config.$bookBlock.bookblock( 'next' );
+						break;
+				}
+			} );
+		};
+
+		return { init : init };
+
+})();
+</script>
+<script>
+	Page.init();
+</script>
+
+
+</body>
+
+<!-- Mirrored from anunaproduction.com/prints.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jun 2014 22:06:16 GMT -->
+</html>

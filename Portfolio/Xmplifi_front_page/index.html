@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html>
+
+<!-- Mirrored from anunaproduction.com/Xmplifi_front_page/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jun 2014 22:05:31 GMT -->
+<head>
+	<meta charset="utf-8">
+	<link href="styles.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<script src="../../ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<title>Untitled Document</title>
+</head>
+
+<body>
+	<div class="top" id="header">
+		<div class="blue-strip ">
+			<div class="logo"><img src="img/logo.png"></div>
+		</div>
+		<div class="container">
+        
+        
+			<header class="header" >
+				
+                <div id="emailform" >
+					<h1 class="header-h1">Xmplifi is a process efficiency workflow tool.</h1>
+					<p class="header-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend suscipit urna, eget consequat dui aliquam id. Phasellus pulvinar bibendum nisl, at convallis libero.</p>
+				</div>
+			</header>
+<div id="thankyou" style="display:none" >
+        <button class="exit">x</button>
+					<p class="NormalCharacterStyle">Thank you for your interest in Xmplifi.</p>
+                    <p class="NormalCharacterStyle1">We'll Send You Updates.</p>
+		</div>
+			<section class="update-signup" >
+				<form action="#" id="update-signup" name="update-signup">
+					<fieldset>
+						<div class="form-firstname">
+							<label for="first-name"></label> <input name="first-name" placeholder="First Name" required="">
+						</div>
+
+						<div class="form-lastname">
+							<label for="last-name"></label> <input name="last-name" placeholder="Last Name" required="">
+						</div>
+
+						<div class="form-email">
+							<label for="email"></label> <input autofocus name="email" placeholder="Email" required="" type="email">
+						</div>
+
+						<div >
+							<input class="submit-btn" name="login" type="submit" value="Send Me Updates">
+						</div>
+					</fieldset>
+				</form>
+			</section>
+
+		  <div class="divider"></div>
+		</div></div>
+	</div> <!--/CONTAINER -->
+
+	<div id="TheMain" class="container">
+		<section class="main-header">
+			<h1 class="main-h1">How's it work?</h1>
+		</section>
+
+		<section class="section-main">
+			<div class="step-one steps">
+				<div class="row"><img src="img/2013-10-30-Xmplifi-Landing-Page-Design_03.png"></div>
+
+				<div class="row-p">
+					<h2>Step One</h2>
+
+					<p>Organization select beanded content they wish to promote though social networks.</p>
+				</div>
+			</div>
+
+			<div class="step-two steps">
+				<div class="row"><img src="img/2013-10-30-Xmplifi-Landing-Page-Design_06.png"></div>
+
+				<div class="row-p">
+					<h2>Step Two</h2>
+
+					<p>Content is automatically delivered to Xmplifi social media managers based on prioritization and pre-established criteria.</p>
+				</div>
+			</div>
+
+			<div class="step-three steps">
+				<div class="row"><img src="img/2013-10-30-Xmplifi-Landing-Page-Design_08.png"></div>
+
+				<div class="row-p">
+					<h2>Step Three</h2>
+
+					<p>Administrators select the content they want to promote, customize it if necessary, introduce the content, and then define the dates, times and social media channels to publish through.</p>
+				</div>
+			</div>
+
+			<div class="step-four steps">
+				<div class="row"><img src="img/2013-10-30-Xmplifi-Landing-Page-Design_10.png"></div>
+
+				<div class="row-p">
+					<h2>Step Four</h2>
+
+					<p>Xmplifi generates a unique URL for each piece of content for each promoter and for each social media channel so the campaign can be measured on a granular level.</p>
+				</div>
+			</div>
+
+			<div class="step-five steps">
+				<div class="row"><img src="img/2013-10-30-Xmplifi-Landing-Page-Design_12.png"></div>
+
+				<div class="row-p">
+					<h2>Step Five</h2>
+
+					<p>Xmplifi destributes the content, custom copy and unique URLs to promoters who then redistribute to their own social networks.</p>
+				</div>
+			</div>
+
+			<div class="step-six steps">
+				<div class="row"><img src="img/2013-10-30-Xmplifi-Landing-Page-Design_14.png"></div>
+
+				<div class="row-p">
+					<h2>Step Six</h2>
+
+					<p>Xmplifi monitors feedback and existing campaigns through Google Analytics and suggests optimizations based on content ans social channels that are delivering the best results.</p>
+				</div>
+			</div>
+
+			<div class="step-seven steps">
+				<div class="row"><img src="img/2013-10-30-Xmplifi-Landing-Page-Design_16.png"></div>
+
+				<div class="row-p">
+					<h2>Step Seven</h2>
+
+					<p>real-time and post-campaign reporting enables administrators to make adjustments based on performance.</p>
+				</div>
+			</div>
+		</section>
+	</div><!--/CONTAINER-->
+</body>
+<script>
+$('#update-signup').submit(function( event ) {
+var firstname = $("input[name='first-name']").val();  
+var lastname = $("input[name='last-name']").val();  
+var email = $("input[name='email']").val();  
+$.post("formprocess.html",{firstname:firstname,lastname:lastname,email:email},function(data){
+	$('.update-signup').fadeOut('fast','',function(){
+		$('#thankyou').fadeIn('fast');
+		$("input[name='first-name']").val("");
+		$("input[name='last-name']").val(""); 
+		$("input[name='email']").val("")
+		});
+	});
+  event.preventDefault();
+});
+
+$('.exit').on('click',function(){
+	
+	$('#thankyou').fadeOut('fast','',function(){
+		$('.update-signup').fadeIn('fast');
+	});
+});
+</script>
+
+<!-- Mirrored from anunaproduction.com/Xmplifi_front_page/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 12 Jun 2014 22:05:38 GMT -->
+</html>

@@ -1,0 +1,344 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*-----------------------------
+
+INDEX:
+
+BODY AND CONTAINER
+LOGO
+HEADER
+FORM 
+DIVIDER
+STEPS
+BUTTON STYLES
+
+-------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------------------------------------------
+
+BODY AND CONTAINER
+
+-----------------------------------------------*/
+
+.body{
+	overflow:hidden;
+}
+
+.container{
+	width: 60%;
+	margin: 0 auto;
+}
+
+/*-----------------------------------------------------
+
+LOGO
+
+-------------------------------------------------------*/
+
+.blue-strip{
+	background-color: #d9eff8;
+	width: 100%;
+}
+
+.logo{
+	height: 80px;
+	margin-left: 21%;
+	padding-top: 1.5%;
+	padding-bottom: .5%;
+}
+
+/*-----------------------------------------------------
+
+HEADER
+
+-------------------------------------------------------*/
+
+.header{
+}
+
+h1.header-h1{
+	margin-top: 3%;
+	margin-bottom: 1%;
+	font-size: 2em;
+	text-align:center;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700; 
+	
+}
+
+p.header-p{
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 2%;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400; 
+}
+section.main-header{
+	font-size: 2.3em;
+	text-align:center;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700; 
+}
+
+/*-----------------------------------------------------
+
+FORM
+
+-------------------------------------------------------*/
+.update-signup {
+	}
+fieldset{
+
+	background-color: white;
+	width: 100%;
+	padding-top:10px;
+	padding-left: 10%;
+	
+}
+
+.form-firstname{
+	float:left;
+}
+
+.form-lastname{
+	float: left;
+}
+
+div.form-firstname input, div.form-lastname input, div.form-email input {
+	border:1px solid #d9eff8;
+	font-size:18px;
+	padding:5px;
+}
+
+::-webkit-input-placeholder {
+   color: #0091d2;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 400; 
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #0091d2;  
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 400; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #0091d2;
+   font-family: 'Quicksand', sans-serif;
+   font-weight: 400; 
+}
+
+.form-email{
+	float: left;
+	
+}
+
+.submit-btn{
+	color:rgba(255,255,255,1.00);
+	background:rgba(26,138,241,1.00);
+	font-size:18px;
+	padding:8px 5px;
+	margin-top:-5px;
+}
+.exit{
+	position: relative;
+	top: 0px;
+	margin-top: 0px;
+	margin-right: 0%;
+	margin-left: 93%;
+	margin-bottom: 0px;
+	z-index: 100;
+	background: rgba(0,0,0,0.00);
+	font-size: 28px;
+	color: rgba(255,255,255,1.00);
+	border: 0;
+	}
+input:focus{
+    outline: 0;
+	}
+	*:focus {
+    outline: 0;
+}
+#thankyou{
+	background: #d9eff8;
+	text-align: center;
+	width: 90%;
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 20px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-radius: 26px / 38px;
+	-webkit-box-shadow: 7px 6px rgba(39,50,255,1.00);
+	box-shadow: 7px 6px rgba(39,50,255,1.00);
+	}
+/*-----------------------------------------------------
+
+DIVIDER
+
+-------------------------------------------------------*/
+
+.divider{
+	width: 100%;
+	height: 3px;
+	background-color: #d9eff8;
+	margin: 2% 0 2% 0;
+}
+
+
+/*-----------------------------------------------------
+
+STEPS
+
+-------------------------------------------------------*/
+
+,section-main{
+}
+
+
+.steps{
+	width:72%;
+	float:left;
+	margin-left: 13%;
+	
+	}
+
+.row img{
+	float:left;
+}
+
+.row-p p{
+	padding-top: 2%;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400; 
+
+}
+
+.row-p h2{
+	padding-top: 6%;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700; 
+}
+
+.step-one{
+}
+
+.step-two{
+}
+
+.step-three{
+}
+
+.step-four{
+}
+
+.step-five{
+}
+
+.step-six{
+}
+
+.step-seven{
+	padding-bottom: 10%;
+}
+
+/*-----------------------------------------------------
+
+BUTTON STYLES
+
+-------------------------------------------------------*/
+
+#thankyou .NormalCharacterStyle1
+{
+	font-size : 18px;
+	
+	color : #231F20;
+	color : rgb(35, 31, 32);
+	text-shadow : 7.2px 7.2px 5.04px rgba(35, 31, 32, 0.3);
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400; 
+}
+#thankyou .NormalCharacterStyle
+{
+	font-size : 30px;
+	margin-top:-20px;
+	letter-spacing : -0.73px;
+	color : #231F20;
+	color : rgb(35, 31, 32);
+	text-shadow : 7.2px 7.2px 5.04px rgba(35, 31, 32, 0.3);
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700; 
+	padding-bottom:15px;
+}
+.top{
+	position:fixed;
+	z-index:100;
+	}
+	#header{
+		display:inline-block;
+		background:#FFF;
+		width: 100%;
+
+		}
+		#TheMain{
+			Position:relative;
+			display:block;
+			top:350px;
+			
+			}
+	.cell{
+		position:relative;
+		}
